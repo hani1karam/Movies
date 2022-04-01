@@ -6,4 +6,4 @@ This architecture using a layered software architecture.
 
 * Digram 
 
-  <img align="center" width="900" height="600" img src="digram.png">
+  <img align="center" width="1000" height="600" img src="digram.png">
