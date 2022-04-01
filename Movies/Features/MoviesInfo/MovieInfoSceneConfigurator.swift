@@ -6,10 +6,8 @@
 //
 
 import Foundation
-class MovieInfoSceneConfigurator {
-    
+final class MovieInfoSceneConfigurator {
     static func configure() -> MovieInfoVC {
-        
         let viewController = MovieInfoVC()
         let presenter = MovieInfoScenePresenter(displayView: viewController)
         let interactor = MovieInfoSceneInteractor(presenter: presenter)
