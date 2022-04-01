@@ -29,7 +29,7 @@ extension MoviesSceneInteractor {
         worker.fetchMovies { [weak self] (movies, error) in
             guard let self = self else { return }
             if let error = error {
-                let response = MoviesScene.Fetch.Response.failure(error)
+                let response = MoviesScene.Fetch.Response.error(error)
                 self.presenter.presentFetchedMovies(response)
             } else {
                 self.movies = movies.sorted { $0.year > $1.year }
