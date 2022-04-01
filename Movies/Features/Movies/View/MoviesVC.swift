@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol MoviesDelegate: class {
+protocol MoviesDelegate:AnyObject {
     func didSelectMovie(_ movie: Movie)
 }
 
