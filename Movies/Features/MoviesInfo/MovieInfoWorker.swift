@@ -6,13 +6,10 @@
 //
 
 import Foundation
-class MovieInfoWorker {
-    
+final class MovieInfoWorker {
     func fetchMoviePhotos(title: String, _ completionHandler: @escaping([Photo], CustomError?) -> Void) {
-        
         let url = URL(string: Server.imagesRequest(input: title))!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
             guard let data = data else { return }
             do {
                 let decoder = JSONDecoder()
