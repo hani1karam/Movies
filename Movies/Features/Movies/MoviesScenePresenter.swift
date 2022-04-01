@@ -12,7 +12,6 @@ class MoviesScenePresenter: MoviesScenePresentingLogic {
         self.displayView = displayView
     }
 }
-
 extension MoviesScenePresenter {
     func presentFetchedMovies(_ response: MoviesScene.Fetch.Response) {
         switch response {
@@ -23,7 +22,6 @@ extension MoviesScenePresenter {
             displayView?.display(error: error)
         }
     }
-    
     func presentFetchedSearchMovies(_ response: MoviesScene.Filter.Response) {
         switch response {
         case .success(let groupedMovies):
