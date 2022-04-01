@@ -11,15 +11,12 @@ protocol MoviesDelegate:AnyObject {
 }
 
 class MoviesVC: UIViewController {
-    
     @IBOutlet var moviesTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    let searchController = UISearchController(searchResultsController: nil)
-    
-    var interactor: MoviesSceneBusinessLogic!
-    var dataStore: MoviesSceneDataStore!
-    var router: MoviesSceneRouter!
+    private let searchController = UISearchController(searchResultsController: nil)
+    internal var interactor: MoviesSceneBusinessLogic!
+    internal var dataStore: MoviesSceneDataStore!
+    internal var router: MoviesSceneRouter!
     
     weak var delegate: MoviesDelegate?
     
@@ -79,11 +76,9 @@ extension MoviesVC: UISearchBarDelegate {
 }
 
 extension MoviesVC: UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataStore.searchEnabled ? dataStore.searchResults.count : 1
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if dataStore.searchEnabled, let movies = dataStore.searchResults[section].values.first {
