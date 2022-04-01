@@ -83,7 +83,6 @@ extension MoviesTests {
     }
     
     class Worker: MovieWorker {
-        
         override func fetchMovies(_ completionHandler: @escaping ([Movie], CustomError?) -> Void) {
             let movies = [Movie(title: "2012", year: 2009),
                           Movie(title: "(500) Days of Summer", year: 2009),
