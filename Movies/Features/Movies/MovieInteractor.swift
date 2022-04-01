@@ -6,12 +6,12 @@
 //
 
 import Foundation
-class MoviesSceneInteractor: MoviesSceneBusinessLogic, MoviesSceneDataStore {
-    let presenter: MoviesScenePresentingLogic
-    var worker = MovieWorker()
-    var movies: [Movie]
-    var searchEnabled: Bool = false
-    var searchResults: [[Int : [Movie]]] = []
+final class MoviesSceneInteractor: MoviesSceneBusinessLogic, MoviesSceneDataStore {
+    private let presenter: MoviesScenePresentingLogic
+    internal var worker = MovieWorker()
+    internal var movies: [Movie]
+    internal var searchEnabled: Bool = false
+    internal var searchResults: [[Int : [Movie]]] = []
     required init(presenter: MoviesScenePresentingLogic) {
         self.presenter = presenter
         movies = []
