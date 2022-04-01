@@ -12,3 +12,6 @@ This architecture using a layered software architecture.
 # Note
 My Xcode Support iOS 12.1 Not 12.0
 
+* Home Screen
+
+  <img align="left" width="200" height="400" img src="PicApp - Apple iPhone X.png">
