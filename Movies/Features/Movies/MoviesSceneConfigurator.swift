@@ -9,7 +9,6 @@ import Foundation
 class MoviesSceneConfigurator {
     
     static func configure() -> MoviesVC {
-        
         let viewController = MoviesVC()
         let presenter = MoviesScenePresenter(displayView: viewController)
         let interactor = MoviesSceneInteractor(presenter: presenter)
