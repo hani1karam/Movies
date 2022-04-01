@@ -9,7 +9,7 @@ import UIKit
 import Nuke
 class MoviePhotosCell: UITableViewCell {
     @IBOutlet var moviePhotosCollectionView: UICollectionView!
-    var photos: [Photo] = []
+    private var photos: [Photo] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()

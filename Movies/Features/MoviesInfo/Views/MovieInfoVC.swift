@@ -9,8 +9,8 @@ import UIKit
 class MovieInfoVC: UIViewController {
     @IBOutlet var movieInfoTableView: UITableView!
     
-    var interactor: MovieInfoSceneBusinessLogic!
-    var dataStore: MovieInfoSceneDataStore!
+   public var interactor: MovieInfoSceneBusinessLogic!
+   public var dataStore: MovieInfoSceneDataStore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
