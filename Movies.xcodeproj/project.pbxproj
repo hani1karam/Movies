@@ -43,7 +43,7 @@
 		D76EA21927F64DEA00006BB3 /* MovieInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76EA21727F64DEA00006BB3 /* MovieInfoCell.xib */; };
 		D76EA21F27F64F7400006BB3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = D76EA21E27F64F7400006BB3 /* Nuke */; };
 		D76EA22A27F6520F00006BB3 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = D76EA22927F6520F00006BB3 /* movies.json */; };
-		D76EA22F27F6543100006BB3 /* Spy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EA22E27F6543100006BB3 /* Spy.swift */; };
+		D7973F2E27F778B400C3B6FC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7973F2D27F778B400C3B6FC /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +105,7 @@
 		D76EA21627F64DEA00006BB3 /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
 		D76EA21727F64DEA00006BB3 /* MovieInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieInfoCell.xib; sourceTree = "<group>"; };
 		D76EA22927F6520F00006BB3 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
-		D76EA22E27F6543100006BB3 /* Spy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spy.swift; sourceTree = "<group>"; };
+		D7973F2D27F778B400C3B6FC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,6 @@
 			children = (
 				D76EA15927F6378200006BB3 /* MoviesTests.swift */,
 				D76EA15B27F6378200006BB3 /* Info.plist */,
-				D76EA22E27F6543100006BB3 /* Spy.swift */,
 			);
 			path = MoviesTests;
 			sourceTree = "<group>";
@@ -192,6 +191,7 @@
 				D76EA17627F637D300006BB3 /* Alert.swift */,
 				D76EA17E27F63A7F00006BB3 /* CutomError.swift */,
 				D76EA18327F63A8F00006BB3 /* Server.swift */,
+				D7973F2D27F778B400C3B6FC /* Result.swift */,
 			);
 			path = "Extenstions + Custom";
 			sourceTree = "<group>";
@@ -450,6 +450,7 @@
 				D76EA18427F63A8F00006BB3 /* Server.swift in Sources */,
 				D76EA19B27F63BAD00006BB3 /* MovieCell.swift in Sources */,
 				D76EA1D227F6407A00006BB3 /* MovieInfoSceneConfigurator.swift in Sources */,
+				D7973F2E27F778B400C3B6FC /* Result.swift in Sources */,
 				D76EA1DC27F6409700006BB3 /* MovieInfoInteractor.swift in Sources */,
 				D76EA1AE27F63C4800006BB3 /* MoviesProtocols.swift in Sources */,
 				D76EA14027F6377F00006BB3 /* AppDelegate.swift in Sources */,
@@ -475,7 +476,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76EA22F27F6543100006BB3 /* Spy.swift in Sources */,
 				D76EA15A27F6378200006BB3 /* MoviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
