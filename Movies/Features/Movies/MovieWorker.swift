@@ -7,7 +7,6 @@
 
 import Foundation
 class MovieWorker {
-    
     func fetchMovies(_ completionHandler: @escaping([Movie], CustomError?) -> Void) {
         
         if let url = Bundle.main.url(forResource: "movies", withExtension: "json") {
