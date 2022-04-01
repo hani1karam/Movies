@@ -1,7 +1,7 @@
 # Movies APP
 Movies application using the VIPER.
 # Architecture
-I choose to use VIPER (View-Interactor-Presnter-Entite-Router) as my project architecture in order to provide a cleaner code, with clear separation between the view, the data and the business logic. The following diagram shows all the modules and how each module interact with one another after. 
+I choose to use VIPER (View-Interactor-Presnter-Entite-Router) as my project architecture in order to provide a cleaner code, with clear separation VIPER endorses is in testability. we can test the interactor so that it can read and manipulate the data model. And we can do all that while independently testing the presenter to change the view and respond to user actions. The following diagram shows all the modules and how each module interact with one another after. 
 This architecture using a layered software architecture.
 
 * Digram 
@@ -11,3 +11,4 @@ This architecture using a layered software architecture.
   
 # Note
 My Xcode Support iOS 12.1 Not 12.0
+
