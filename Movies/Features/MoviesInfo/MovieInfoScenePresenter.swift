@@ -6,17 +6,14 @@
 //
 
 import Foundation
-class MovieInfoScenePresenter: MovieInfoScenePresentingLogic {
-    
+final class MovieInfoScenePresenter: MovieInfoScenePresentingLogic {
     // MARK: Stored Properties
-    weak var displayView: MovieInfoSceneDisplayView?
-    
+    private weak var displayView: MovieInfoSceneDisplayView?
     // MARK: Initializers
     required init(displayView: MovieInfoSceneDisplayView) {
         self.displayView = displayView
     }
 }
-
 extension MovieInfoScenePresenter {
     func presentFetchedPhotos(_ response: MovieInfoScene.Fetch.Response) {
         switch response {
