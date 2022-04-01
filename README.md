@@ -21,3 +21,7 @@ My Xcode Support iOS 12.1 Not 12.0
 * Search by year
 
   <img align="left" width="200" height="400" img src="searchhByYear.png">
+  
+* Detials Info Movies Screen
+
+  <img align="left" width="200" height="400" img src="DetailsInfo.png">
