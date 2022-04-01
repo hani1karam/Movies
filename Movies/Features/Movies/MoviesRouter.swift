@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MoviesSceneRouter: MoviesSceneRoutingLogic {
-    weak var viewController: (UIViewController & MoviesSceneDisplayView)?
-    weak var dataStore: MoviesSceneDataStore?
+final class MoviesSceneRouter: MoviesSceneRoutingLogic {
+    internal weak var viewController: (UIViewController & MoviesSceneDisplayView)?
+    internal  weak var dataStore: MoviesSceneDataStore?
     
     // MARK: Initializers
     required init(viewController: (UIViewController & MoviesSceneDisplayView), dataStore: MoviesSceneDataStore) {
@@ -19,7 +19,6 @@ class MoviesSceneRouter: MoviesSceneRoutingLogic {
 }
 
 extension MoviesSceneRouter {
-    
     func routeToMovieInfoScene(movie: Movie) {
         let viewController = MovieInfoSceneConfigurator.configure()
         viewController.dataStore.movie = movie
