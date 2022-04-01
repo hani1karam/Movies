@@ -19,7 +19,7 @@ extension MoviesScenePresenter {
         case .success(let movies):
             let viewModel = MoviesScene.ViewModel(movies: movies)
             displayView?.display(viewModel: viewModel)
-        case .failure(let error):
+        case .error(let error):
             displayView?.display(error: error)
         }
     }
@@ -29,7 +29,7 @@ extension MoviesScenePresenter {
         case .success(let groupedMovies):
             let viewModel = MoviesScene.FilteredViewModel(groupedMovies: groupedMovies)
             displayView?.display(filteredViewModel: viewModel)
-        case .failure(let error):
+        case .error(let error):
             displayView?.display(error: error)
         }
     }
