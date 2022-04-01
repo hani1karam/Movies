@@ -9,25 +9,60 @@ import XCTest
 @testable import Movies
 
 class MoviesTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSearchQueryMission() {
+        let presentSpy = PresenterSpy()
+        let interactor = MoviesSceneInteractor(presenter: presentSpy)
+        interactor.worker = Worker()
+        
+        let request = MoviesScene.Filter.Request(query: "mission")
+        interactor.fetchMovies()
+        interactor.filterMovies(request)
+        
+        let responsesMovies = presentSpy.fetchedSearchedMoviesResponse?.value ?? []
+        XCTAssertEqual(responsesMovies.count, 2)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testSearchQuery2012() {
+        let presentSpy = PresenterSpy()
+        let interactor = MoviesSceneInteractor(presenter: presentSpy)
+        interactor.worker = Worker()
+        
+        let request = MoviesScene.Filter.Request(query: "2012")
+        interactor.fetchMovies()
+        interactor.filterMovies(request)
+        
+        let responsesMovies = presentSpy.fetchedSearchedMoviesResponse?.value ?? []
+        XCTAssertEqual(responsesMovies.count, 2)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testSearchQueryEmpty() {
+        let presentSpy = PresenterSpy()
+        let interactor = MoviesSceneInteractor(presenter: presentSpy)
+        interactor.worker = Worker()
+        
+        let request = MoviesScene.Filter.Request(query: "testemptylist")
+        interactor.fetchMovies()
+        interactor.filterMovies(request)
+        
+        let responsesMovies = presentSpy.fetchedSearchedMoviesResponse?.value ?? []
+        XCTAssertEqual(responsesMovies.count, 0)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSearchQueryCaseInsensitivity() {
+        let presentSpy = PresenterSpy()
+        let interactor = MoviesSceneInteractor(presenter: presentSpy)
+        interactor.worker = Worker()
+        
+        interactor.fetchMovies()
+        let requestlowerCase = MoviesScene.Filter.Request(query: "mission")
+        interactor.filterMovies(requestlowerCase)
+        let lowercaseMovieCount = presentSpy.fetchedSearchedMoviesResponse?.value?.count ?? 0
+        
+        let requestUpperCase = MoviesScene.Filter.Request(query: "MISSION")
+        interactor.filterMovies(requestUpperCase)
+        let uppercaseMovieCount = presentSpy.fetchedSearchedMoviesResponse?.value?.count ?? 0
+        
+        XCTAssertEqual(lowercaseMovieCount, uppercaseMovieCount)
     }
-
+    
 }
