@@ -29,7 +29,7 @@ extension MovieInfoSceneInteractor {
             guard let self = self else { return }
             
             if let error = error {
-                let response = MovieInfoScene.Fetch.Response.failure(error)
+                let response = MovieInfoScene.Fetch.Response.error(error)
                 self.presenter.presentFetchedPhotos(response)
             } else {
                 let response = MovieInfoScene.Fetch.Response.success(photos)
