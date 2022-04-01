@@ -23,7 +23,7 @@ extension MovieInfoScenePresenter {
         case .success(let photos):
             let viewModel = MovieInfoScene.Fetch.ViewModel(photos: photos)
             displayView?.display(photos: viewModel)
-        case .failure(let error):
+        case .error(let error):
             displayView?.display(error: error)
         }
     }
