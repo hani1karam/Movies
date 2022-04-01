@@ -10,7 +10,7 @@ This architecture using a layered software architecture.
   
   
 # Note
-My Xcode Support iOS 12.1 Not 12.0
+- Support iOS 12.1
 
 # Screen APP
 
