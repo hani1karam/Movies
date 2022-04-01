@@ -5,16 +5,12 @@
 //  Created by hany karam on 3/31/22.
 //
 
-class MovieInfoSceneInteractor: MovieInfoSceneBusinessLogic, MovieInfoSceneDataStore {
-    
+final class MovieInfoSceneInteractor: MovieInfoSceneBusinessLogic, MovieInfoSceneDataStore {
     // MARK: Stored Properties
-    let presenter: MovieInfoScenePresentingLogic
-    var worker = MovieInfoWorker()
-    
-    var photos: [Photo] = []
-    
-    var movie = Movie()
-    
+    private let presenter: MovieInfoScenePresentingLogic
+    private var worker = MovieInfoWorker()
+    internal var photos: [Photo] = []
+    internal var movie = Movie()
     // MARK: Initializers
     required init(presenter: MovieInfoScenePresentingLogic) {
         self.presenter = presenter
@@ -22,7 +18,6 @@ class MovieInfoSceneInteractor: MovieInfoSceneBusinessLogic, MovieInfoSceneDataS
 }
 
 extension MovieInfoSceneInteractor {
-    
     func fetchMoviePhotos(title: String) {
         worker.fetchMoviePhotos(title: title) { [weak self] (photos, error) in
             
